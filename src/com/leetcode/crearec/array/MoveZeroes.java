@@ -2,6 +2,9 @@ package com.leetcode.crearec.array;
 
 import java.util.Arrays;
 
+/**
+ * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ */
 public class MoveZeroes {
 	public static void main(String[] args) {
 		int[] nums = new int[] {1, 0};

@@ -2,6 +2,9 @@ package com.leetcode.crearec.array;
 
 import java.util.Arrays;
 
+/**
+ * Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+ */
 public class SingleNumber {
 	public static void main(String[] args) {
 		int[] nums = new int[] {5, 3, 1, 1, 3};

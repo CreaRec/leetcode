@@ -5,6 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Given two arrays, write a function to compute their intersection.
+ */
 public class IntersectionOfTwoArrays2 {
 	public static void main(String[] args) {
 		int[] nums1 = new int[] {4,9,5};

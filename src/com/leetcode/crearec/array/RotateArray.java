@@ -1,5 +1,8 @@
 package com.leetcode.crearec.array;
 
+/**
+ * Given an array, rotate the array to the right by k steps, where k is non-negative.
+ */
 public class RotateArray {
 	public static void main(String[] args) {
 		int[] nums = new int[] {1, 2, 3, 4, 5, 6, 7};
