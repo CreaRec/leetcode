@@ -1,9 +1,10 @@
 package com.hakerrank.crearec.prepare.week2;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+import java.util.stream.IntStream;
 
 public class FlippingBits {
 
@@ -20,22 +21,22 @@ public class FlippingBits {
 		return Long.parseLong(s, 2);
 	}
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int q = Integer.parseInt(bufferedReader.readLine().trim());
+		int q = Integer.parseInt(bufferedReader.readLine().trim());
 
-        IntStream.range(0, q).forEach(qItr -> {
-            try {
-                long n = Long.parseLong(bufferedReader.readLine().trim());
+		IntStream.range(0, q).forEach(qItr -> {
+			try {
+				long n = Long.parseLong(bufferedReader.readLine().trim());
 
-                long result = flippingBits(n);
-	            System.out.println(result);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
+				long result = flippingBits(n);
+				System.out.println(result);
+			} catch (IOException ex) {
+				throw new RuntimeException(ex);
+			}
+		});
 
-        bufferedReader.close();
-    }
+		bufferedReader.close();
+	}
 }

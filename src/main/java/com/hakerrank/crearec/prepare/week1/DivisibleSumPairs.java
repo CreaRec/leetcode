@@ -1,9 +1,11 @@
 package com.hakerrank.crearec.prepare.week1;
 
-import java.io.*;
-import java.util.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+import java.util.stream.Stream;
+
 import static java.util.stream.Collectors.toList;
 
 public class DivisibleSumPairs {
@@ -14,7 +16,7 @@ public class DivisibleSumPairs {
 			int first = ar.get(i);
 			for (int j = i + 1; j < ar.size(); j++) {
 				int second = ar.get(j);
-				if((first + second) % k == 0) {
+				if ((first + second) % k == 0) {
 					count++;
 				}
 			}
@@ -22,18 +24,16 @@ public class DivisibleSumPairs {
 		return count;
 	}
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) throws IOException {
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-        int k = Integer.parseInt(bufferedReader.readLine());
+		int k = Integer.parseInt(bufferedReader.readLine());
 
-        List<Integer> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-            .map(Integer::parseInt)
-            .collect(toList());
+		List<Integer> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt).collect(toList());
 
-        int result = divisibleSumPairs(k, ar);
-	    System.out.println(result);
+		int result = divisibleSumPairs(k, ar);
+		System.out.println(result);
 
-        bufferedReader.close();
-    }
+		bufferedReader.close();
+	}
 }
